@@ -12,17 +12,35 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class VeiculoController {
 
-    @FXML private TableView<Veiculo> tableVeiculos;
-    @FXML private TableColumn<Veiculo, Integer> colId;
-    @FXML private TableColumn<Veiculo, String> colMatricula;
-    @FXML private TableColumn<Veiculo, String> colMarca;
-    @FXML private TableColumn<Veiculo, String> colModelo;
-    @FXML private TableColumn<Veiculo, String> colCliente;
+    @FXML
+    private TableView<Veiculo> tableVeiculos;
 
-    @FXML private TextField txtMatricula;
-    @FXML private TextField txtMarca;
-    @FXML private TextField txtModelo;
-    @FXML private ComboBox<Cliente> cbCliente;
+    @FXML
+    private TableColumn<Veiculo, Integer> colId;
+
+    @FXML
+    private TableColumn<Veiculo, String> colMatricula;
+
+    @FXML
+    private TableColumn<Veiculo, String> colMarca;
+
+    @FXML
+    private TableColumn<Veiculo, String> colModelo;
+
+    @FXML
+    private TableColumn<Veiculo, String> colCliente;
+
+    @FXML
+    private TextField txtMatricula;
+
+    @FXML
+    private TextField txtMarca;
+
+    @FXML
+    private TextField txtModelo;
+
+    @FXML
+    private ComboBox<Cliente> cbCliente;
 
     private VeiculoDAO veiculoDAO = new VeiculoDAO();
     private ClienteDAO clienteDAO = new ClienteDAO();

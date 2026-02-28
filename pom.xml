@@ -31,6 +31,19 @@
             <version>${javafx.version}</version>
         </dependency>
 
+        <!--  JavaFX Actualizado -->
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx-fontawesome</artifactId>
+            <version>4.7.0-9.1.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx -->
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx</artifactId>
+            <version>8.9</version>
+        </dependency>
+
         <!-- MySQL Connector -->
         <dependency>
             <groupId>com.mysql</groupId>
@@ -58,7 +71,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>mz.oficina.AutoCheck.App</mainClass>
+                    <mainClass>mz.oficina.AutoCheck.application.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,0 +1,10 @@
+.textfield{
+    -fx-background-color: linear-gradient(to bottom, #d9e9ff, #d9e9ff);
+    -fx-background-radius: 10px;
+    -fx-border-radius:10px;
+    -fx-border-width: .4px;
+}
+
+.textfield:hover{
+    -fx-border-color: #000;
+}

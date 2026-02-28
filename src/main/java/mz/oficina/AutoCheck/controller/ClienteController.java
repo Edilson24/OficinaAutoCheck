@@ -1,38 +1,51 @@
 package mz.oficina.AutoCheck.controller;
 
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import mz.oficina.AutoCheck.dao.ClienteDAO;
 import mz.oficina.AutoCheck.model.Cliente;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.fxml.FXML;
 
-public class ClienteController {
+import java.awt.*;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @FXML private TableView<Cliente> tableClientes;
-    @FXML private TableColumn<Cliente, Integer> colId;
-    @FXML private TableColumn<Cliente, String> colNome;
-    @FXML private TableColumn<Cliente, String> colTelefone;
-    @FXML private TableColumn<Cliente, String> colEmail;
+public class ClienteController implements Initializable {
 
-    @FXML private TextField txtNome;
-    @FXML private TextField txtTelefone;
-    @FXML private TextField txtEmail;
+    @FXML
+    private TableView<Cliente> tableClientes;
+
+    @FXML
+    private TableColumn <Cliente, Integer> colId;
+
+    @FXML
+    private TableColumn <Cliente, String> colNome;
+
+    @FXML
+    private TableColumn <Cliente, String> colTelefone;
+
+    @FXML
+    private TableColumn<Cliente, String> colEmail;
+
+    @FXML
+    private TextField txtNome;
+
+    @FXML
+    private TextField txtTelefone;
+
+    @FXML
+    private TextField txtEmail;
 
     private ClienteDAO clienteDAO = new ClienteDAO();
     private ObservableList<Cliente> listaClientes = FXCollections.observableArrayList();
 
-    @FXML
-    private void initialize() {
-        // Corrigido TableColumn de int para IntegerProperty
-        colId.setCellValueFactory(cell -> new javafx.beans.property.SimpleIntegerProperty(cell.getValue().getId()).asObject());
-        colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        colTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
-        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-        atualizarTabela();
-    }
 
     @FXML
     private void salvarCliente() {
@@ -67,9 +80,9 @@ public class ClienteController {
     }
 
     private void limparCampos() {
-        txtNome.clear();
-        txtTelefone.clear();
-        txtEmail.clear();
+        txtNome.setText("");
+        txtTelefone.setText("");
+        txtEmail.setText("");
     }
 
     private void exibirAlerta(Alert.AlertType tipo, String titulo, String msg) {
@@ -77,5 +90,21 @@ public class ClienteController {
         alert.setHeaderText(titulo);
         alert.setContentText(msg);
         alert.show();
+    }
+
+    @FXML
+    private void initializ() {
+        // Corrigido TableColumn de int para IntegerProperty
+        colId.setCellValueFactory(cell -> new javafx.beans.property.SimpleIntegerProperty(cell.getValue().getId()).asObject());
+        colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        colTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+        atualizarTabela();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }

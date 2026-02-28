@@ -2,7 +2,7 @@ package mz.oficina.AutoCheck.controller;
 
 import mz.oficina.AutoCheck.dao.UsuarioDAO;
 import mz.oficina.AutoCheck.model.Usuario;
-import mz.oficina.AutoCheck.App;
+import mz.oficina.AutoCheck.application.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

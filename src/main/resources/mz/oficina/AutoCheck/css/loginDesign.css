@@ -1,0 +1,25 @@
+.login-btn{
+    -fx-background-color: linear-gradient (to bottom, #21365d, #294d90);
+    -fx-background-radius: 10px;
+    -fx-border-width: .4px;
+    -fx-font-family: "Arial Black";
+    -fx-border-radius:10px;
+    -fx-border-color: #000;
+}
+
+.textfield{
+    -fx-background-color: linear-gradient(to bottom, #d9e9ff, #d9e9ff);
+    -fx-background-radius: 10px;
+    -fx-border-radius:10px;
+    -fx-border-width: .4px;
+}
+
+.textfield:hover{
+    -fx-border-color: #000;
+}
+
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right, #4d59b9, #091257);
+    -fx-border-color:#000;
+    -fx-border-width: .4px 0px .4px .4px;
+}

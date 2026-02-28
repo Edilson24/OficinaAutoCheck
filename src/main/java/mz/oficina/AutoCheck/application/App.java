@@ -1,4 +1,4 @@
-package mz.oficina.AutoCheck;
+package mz.oficina.AutoCheck.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +19,7 @@ public class App extends Application {
     }
 
     public void abrirLogin() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/mz/oficina/AutoCheck/login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/mz/oficina/AutoCheck/views/login.fxml"));
         Scene scene = new Scene(loader.load());
         primaryStage.setScene(scene);
         primaryStage.setTitle("AutoCheck - Login");
@@ -28,7 +28,7 @@ public class App extends Application {
 
     public void abrirDashboard(Usuario usuario) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mz/oficina/AutoCheck/dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mz/oficina/AutoCheck/views/dashboard.fxml"));
             Scene scene = new Scene(loader.load());
 
             // Passa o usuário para o DashboardController
